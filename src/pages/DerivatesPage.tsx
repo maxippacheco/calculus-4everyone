@@ -1,6 +1,7 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import { AppLayout } from '../layouts'
 import { BlockMath } from 'react-katex'
+
 
 
 const NavItems = () => {
@@ -18,9 +19,13 @@ const NavItems = () => {
 const DerivatesPage = () => {
 
 	return (
-		<AppLayout navItems={<NavItems /> }>
-			<BlockMath math={`\\forall x\\in I \\int x^2 dx `} />
-		</AppLayout> 
+		<>
+			<Flex justifyContent="center">
+				<Heading as="h1" size={{ sm: 'lg', lg: 'xl'}}>Casos de no-derivabilidad</Heading>
+				<Text></Text>
+			</Flex>
+			{/* <BlockMath math={`\\forall x\\in I \\int x^2 dx `} /> */}
+		</> 
 	)
 }
 

@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import CalculusApp from './CalculusApp.tsx'
 
+import "./index.css"
 import 'katex/dist/katex.min.css';
 
 

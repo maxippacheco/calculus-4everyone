@@ -17,7 +17,7 @@ interface Route{
 
 const HomePage = lazy(() => import(/* webpackChunkName: "HomePage" */ '../pages/HomePage'))
 const LoginPage = lazy(() => import(/* webpackChunkName: "LoginPage" */ '../pages/LoginPage'))
-const DerivatesPage = lazy(() => import(/* webpackChunkName: "LoginPage" */ '../pages/DerivatesPage'))
+const DerivatesRouter = lazy(() => import(/* webpackChunkName: "LoginPage" */ './DerivatesRouter'))
 
 export const routes: Route[] = [
 	{
@@ -35,9 +35,9 @@ export const routes: Route[] = [
 		icon: FiLogIn
 	},
 	{
-		path: '/derivates',
+		path: '/derivates/*',
 		to: '/derivates',
-		Component: DerivatesPage,
+		Component: DerivatesRouter,
 		name: 'Derivates',
 		icon: TbMathFunctionY 
 	}

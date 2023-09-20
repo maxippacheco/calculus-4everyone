@@ -1,10 +1,11 @@
 import { Suspense } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { routes } from '.'
+import { Loader } from '../components/ui'
 
 export const AppRouter = () => {
 	return (
-		<Suspense fallback={ <div> Loading </div> }>
+		<Suspense fallback={ <Loader /> }>
 			<BrowserRouter>
 				<Routes>
 					{
