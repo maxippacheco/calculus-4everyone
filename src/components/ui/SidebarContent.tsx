@@ -12,7 +12,7 @@ import { NavItem } from "."
 import { routes } from "../../routers"
 
 
-export const SidebarContent = ({ navbarItems, onClose, ...rest }: SidebarProps) => {
+export const SidebarContent = ({ navbarItems, onClose, id, ...rest }: SidebarProps) => {
   return (
     <Box
       // transition="3s ease"
@@ -31,20 +31,21 @@ export const SidebarContent = ({ navbarItems, onClose, ...rest }: SidebarProps) 
       </Flex>
       {
 				routes.map((link) => (
-          <>
+          <div key={link.path}>
             <Flex
               align="center"
               p="4"
               mx="4"
               borderRadius="lg"
-              role="group"  
+              role="group"
+              key={link.path}  
             >
               {/* <Text as="kbd">Typography</Text> */}
             </Flex>
             <NavItem key={ link.name } icon={ link.icon } to={ link.to }>
             { link.name }
             </NavItem> 
-          </>
+          </div>
       	))
 			}
 

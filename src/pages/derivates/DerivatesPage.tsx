@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
-import { AppLayout } from '../layouts'
+import { AppLayout } from '../../layouts'
 import { BlockMath } from 'react-katex'
 
 

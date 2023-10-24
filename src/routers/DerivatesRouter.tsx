@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { DerivatesPage, CuestioneslogicasPage } from '../pages'
+import { DerivatesPage, CuestioneslogicasPage, NonDifferentiablePage } from '../pages'
 import { AppLayout } from '../layouts'
 import { Flex, Box } from '@chakra-ui/react'
 
@@ -21,6 +21,7 @@ const DerivatesRouter = () => {
 			<Routes>
 				<Route element={ <DerivatesPage /> } path='/' />
 				<Route element={ <CuestioneslogicasPage /> } path='/cuestiones-logicas' />
+				<Route element={ <NonDifferentiablePage /> } path='/non-differentiable' />
 			</Routes>
 		</AppLayout>
 	)

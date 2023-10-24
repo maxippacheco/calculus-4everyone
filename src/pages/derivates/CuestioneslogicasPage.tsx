@@ -2,7 +2,17 @@ import { Box, Flex, Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/r
 import { AiFillStar } from 'react-icons/ai';
 import { BlockMath, InlineMath } from 'react-katex';
 
+const sectionDescription = [
+	{ text: "Implicacion directa" },
+	{ text: "Contrareciproco" },
+	{ text: "Cuantificadores" },
+	{ text: "Existencial" },
+	{ text: "Si solo si" },
+	{ text: "Verdaderos y falsos" }
+]
+
 export const CuestioneslogicasPage = () => {
+	
 	return (
 		<Flex m={"5"} flexDirection={"row"}>
 			<Box flex="1">
@@ -130,13 +140,11 @@ export const CuestioneslogicasPage = () => {
 				<Flex justifyContent="end">
 					<List spacing={2}>
 						<ListItem as="kbd" fontSize="lg" color="cyan.500">ON THIS PAGE</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Implicacion directa</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Contrareciproco</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Cuantificadores</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Existencial</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Si solo si</ListItem>
-						<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>Verdaderos y falsos</ListItem>
-
+						{
+							sectionDescription.map(({text}) => (
+								<ListItem _hover={{textDecoration: 'underline', cursor:'pointer'}}>{text}</ListItem>
+							))
+						}
 					</List>
 				</Flex>
 			</Box>
